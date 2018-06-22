@@ -11,7 +11,7 @@ export class CurrentWeatherComponent implements OnInit {
 
   constructor(private weatherService: WeatherService) { 
     this.current = {
-      city: 'Bethesda',
+      city: 'Cuyahoga Falls',
       country: 'US',
       date: new Date(),
       image: 'assets/img/jodex.jpg',
@@ -21,7 +21,7 @@ export class CurrentWeatherComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.weatherService.getCurrentWeather(this.current.city, this.current.country).subscribe(((data) =>{
+    this.weatherService.getCurrentWeather(this.current.city, this.current.country).subscribe((data) =>{
       this.current = data
     })
   }
